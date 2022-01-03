@@ -29,13 +29,13 @@
             text-shadow: #001020DD 3px 3px;
         }
 
-        span {
-            color: #ff9900;
-            text-shadow: #001020DD 3px 3px;
-        }
-
         b {
-            color: #FFFFFF;
+            font-weight: bold;
+            color: #bbbbff;
+            text-shadow: #00102033 3px 3px;
+            background-color: #33404D;
+            border-radius: 5px;
+            padding: 2px 5px 2px 5px;
         }
 
         .content {
@@ -45,7 +45,6 @@
             margin-left: auto;
             margin-right: auto;
             box-shadow: #00102099 5px 5px;
-
         }
 
         .center {
@@ -77,68 +76,78 @@
 
         <h3>Useful Shortcuts</h3>
         <ul>
-            <li>[<span>Numpad .</span>] - Frame selected objects.</li>
-            <li>[<span>Home</span>] - Frame all.</li>
-            <li>[<span>X</span>],[<span>Y</span>],[<span>Z</span>] - Constrain transform along axis.</li>
-            <li>[<span>Shift X</span>],[<span>Shift Y</span>],[<span>Shift Z</span>] - Constrain transform along plane.
+            <li><b>Numpad .</b> - Frame selected objects.</li>
+            <li><b>Home</b> - Frame all.</li>
+            <li><b>X</b>,<b>Y</b>,<b>Z</b> - Constrain transform along axis.</li>
+            <li><b>Shift X</b>,<b>Shift Y</b>,<b>Shift Z</b> - Constrain transform along plane.
             </li>
-            <li>[<span>F3</span>] - Opens command palette. Can search by name.</li>
-            <li>[<span>Tab</span>] - Switch between object and edit modes.</li>
-            <li>[<span>1</span>],[<span>2</span>],[<span>3</span>] - Switch between vertices, edges and faces modes.
+            <li><b>F3</b> - Opens command palette. Can search by name.</li>
+            <li><b>Tab</b> - Switch between object and edit modes.</li>
+            <li><b>1</b>,<b>2</b>,<b>3</b> - Switch between vertices, edges and faces modes.
             </li>
-            <li>[<span>L</span>] - Select linked objects.</li>
-            <li>[<span>P</span>] - Separate meshes into different objects.</li>
-            <li>[<span>J</span>] - Join separate objects into a single one.</li>
-            <li>[<span>Ctrl X</span>] - Dissolve selected.</li>
-            <li>[<span>Ctrl Alt Numpad 0] - Move selected camera to current view.</span></li>
+            <li><b>L</b> - Select linked objects.</li>
+            <li><b>P</b> - Separate meshes into different objects.</li>
+            <li><b>J</b> - Join separate objects into a single one.</li>
+            <li><b>Ctrl X</b> - Dissolve selected.</li>
+            <li><b>Ctrl Alt Numpad 0</b> - Move selected camera to current view.</span></li>
         </ul>
 
-        <h3>Explained concepts</h3>
+        <h3 id="1">1. Basic Concepts</h3>
+
         <ul>
-            <li>...</li>
+            <li>Start out with blocking characters.</li>
+            <li>Use a plane as a floor for reference.</li>
+            <li>Use different materials for each body part.</li>
+            <li>Wireframe view helps positioning blocks together with front view in ortho mode.</li>
         </ul>
+        <div class="center">
+            <img class="screen" src="5-simple-character.png" />
+            <div class="screen">Blocking out character with cubes</div>
+        </div>
 
         <h2 id="section-2">2. Block Man</h2>
 
-        <h3 id="8">8. Block Person</h3>
-
-        <div class="center">
-            <img class="screen" src="8" />
-            <div class="screen">...</div>
-        </div>
-
         <h3 id="9">9. Importing Reference Image</h3>
-        <p>Same as in <a href="https://busta.dev/udemy-low-poly-landscapes/#9">Low Poly Landscapes Course</a>.</p>
+        <p>Drag reference images into blender scene. This adds an empty mesh that does not get rendered.</p>
+        <p><b>Alt A</b> to get rid of rotation and <b>Alt G</b> to get rid of the location.</p>
+        <p>When placed into position, reference can be duplicated and rotated to be able to see on side view as well.
+        </p>
         <div class="center">
-            <img class="screen" src="9" />
-            <div class="screen">...</div>
+            <img class="screen" src="9-block-person.png" />
+            <div class="screen">Adding block people references on both view planes (side and front)</div>
         </div>
 
         <h3 id="10">10. Edit Mode</h3>
-
+        <p>Toning reference opacity down makes it easier to see the objects you are adding to the scene.</p>
+        <p>Add objects using front view as reference, then adjust to side view.</p>
+        <p>Sometimes the front-view and side-view references will not match. Choose a priority one to take over (e.g.
+            front).</p>
         <div class="center">
-            <img class="screen" src="10" />
-            <div class="screen">...</div>
+            <img class="screen" src="10-edit-mode.png" />
+            <div class="screen">Leg created from editing mesh in both perspectives.</div>
         </div>
 
         <h3 id="11">11. Extruding Objects</h3>
-
+        <p>Using extrusion to create foot toes.</p>
         <div class="center">
-            <img class="screen" src="11" />
-            <div class="screen">...</div>
+            <img class="screen" src="11-extruding.png" />
+            <div class="screen">Leg improved by extruding parts from foot.</div>
         </div>
 
         <h3 id="12">12. Mirroring</h3>
-
+        <p>When using mirror modifier, remember to remove faces from inside.</p>
+        <p>Remember to enable clipping to keep the shape manifold.</p>
+        <p>Add some roundness by making side faces smaller (not visible in the concept)</p>
         <div class="center">
-            <img class="screen" src="12" />
-            <div class="screen">...</div>
+            <img class="screen" src="12-mirroring.png" />
+            <div class="screen">Body created using mirror modifier.</div>
         </div>
 
         <h3 id="13">13. Mirror By Object</h3>
-
+        <p>Add mirror modifier to one object, targeting a central part. Copy over using <b>Ctrl L</b> and copying
+            modifiers.</p>
         <div class="center">
-            <img class="screen" src="13" />
+            <img class="screen" src="13-mirror-by-object.png" />
             <div class="screen">...</div>
         </div>
 
@@ -178,13 +187,6 @@
         </div>
 
         <h2 id="section-3">3. Full Character</h2>
-
-        <h3 id="19">19. aFull Character</h3>
-
-        <div class="center">
-            <img class="screen" src="18" />
-            <div class="screen">...</div>
-        </div>
 
         <h3 id="20">20. The Torso</h3>
 
@@ -244,13 +246,6 @@
 
         <h2 id="section-4">4. Detailed Character</h2>
 
-        <h3 id="28">28. Detailed Characters</h3>
-
-        <div class="center">
-            <img class="screen" src="28" />
-            <div class="screen">...</div>
-        </div>
-
         <h3 id="29">29. Big Man</h3>
 
         <div class="center">
@@ -288,13 +283,6 @@
 
         <h2 id="section-5">5. Basic Rigging</h2>
 
-        <h3 id="34">34. Basic Rigging</h3>
-
-        <div class="center">
-            <img class="screen" src="34" />
-            <div class="screen">...</div>
-        </div>
-
         <h3 id="35">35. Human Rig</h3>
 
         <div class="center">
@@ -317,13 +305,6 @@
         </div>
 
         <h2 id="section-6">6. Female Character</h2>
-
-        <h3 id="38">38. Female Character</h3>
-
-        <div class="center">
-            <img class="screen" src="38" />
-            <div class="screen">...</div>
-        </div>
 
         <h3 id="39">39. Base Mesh</h3>
 
