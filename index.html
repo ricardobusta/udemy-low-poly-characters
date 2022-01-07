@@ -160,7 +160,8 @@
         <p>Good position to rig characters for animation later is an "A" pose (female pose in the reference).</p>
         <div class="center">
             <img class="screen" src="15-block-female.png" />
-            <div class="screen">Duplicated male block to create female version using the reference. Morphing shapes to achieve the expected result.</div>
+            <div class="screen">Duplicated male block to create female version using the reference. Morphing shapes to
+                achieve the expected result.</div>
         </div>
 
         <h3 id="16">16. Block Characters</h3>
@@ -174,7 +175,8 @@
         <p><b>Shift S</b> and <b>1</b> to move cursor to world center.</p>
         <p>Scale character using point between foot to keep on ground.</p>
         <p><b>Alt E</b> gives extra options when extruding. E.g. extrude along face.</p>
-        <p><b>I</b> starts inset command. Pressing <b>I</b> again alternates to each individual face being inset separately.</p>
+        <p><b>I</b> starts inset command. Pressing <b>I</b> again alternates to each individual face being inset
+            separately.</p>
         <div class="center">
             <img class="screen" src="17-cyborg.png" />
             <div class="screen">My custom cyborg.</div>
@@ -196,57 +198,60 @@
         <p>Nice to start out with chest. More central and more complex.</p>
         <p>Auto-mirror add on to speed up mirror shape flow.</p>
         <div class="center">
-            <img class="screen" src="20" />
-            <div class="screen">...</div>
+            <img class="screen" src="20-the-torso.png" />
+            <div class="screen">Torso model</div>
         </div>
 
         <h3 id="21">21. The Head</h3>
-
+        <p>Not much new, just shape the head following the reference.</p>
+        <p>Try to model more proeminent parts of the face first (brows/eye cavity/nose/chin)</p>
         <div class="center">
-            <img class="screen" src="21" />
-            <div class="screen">...</div>
+            <img class="screen" src="21-the-head.png" />
+            <div class="screen">Head model</div>
         </div>
 
         <h3 id="22">22. Topology & Rigging</h3>
-
+        <p>Test out some mesh for joins. Single split, triple split and triangular split. Each one behaves in a
+            different way. Single split is worse even when keeping the volume after transform.</p>
+        <p>Pinching is specially worrysome for low poly models.</p>
         <div class="center">
-            <img class="screen" src="22" />
-            <div class="screen">...</div>
+            <img class="screen" src="22-topology-and-rigging.png" />
+            <div class="screen">It's possible to see how each different type of joint do when being bent by a rigged
+                armature.</div>
         </div>
 
         <h3 id="23">23. The Arm & The Hand</h3>
-
+        <p>Try to keep the square/rounded shape of the arm.</p>
+        <p>When get to the sleeve part, use <b>G G</b> to move edges and make it slightly thinner.</p>
         <div class="center">
-            <img class="screen" src="23" />
-            <div class="screen">...</div>
+            <img class="screen" src="23-arm-and-hand.png" />
+            <div class="screen">Extruding from torso all the way to the tip of the fingers. Thumb can be extruded from a
+                side hand face.</div>
         </div>
 
         <h3 id="24">24. The Legs & The Feet</h3>
-
+        <p>When trying to rotate a prism face along an axis but want to keep the prism width, the face scale in that
+            axis can be set to 0 instead. </p>
         <div class="center">
-            <img class="screen" src="24" />
-            <div class="screen">...</div>
+            <img class="screen" src="24-legs-and-feet.png" />
+            <div class="screen">Same thing</div>
         </div>
 
         <h3 id="25">25. Female Character</h3>
-
+        <p>Just select vertices and morph them into position.</p>
         <div class="center">
-            <img class="screen" src="25" />
-            <div class="screen">...</div>
+            <img class="screen" src="25-female-character.png" />
+            <div class="screen">Morphing male character into female using the blocky reference.</div>
         </div>
 
         <h3 id="26">26. Both Characters</h3>
-
-        <div class="center">
-            <img class="screen" src="26" />
-            <div class="screen">...</div>
-        </div>
+        <p>Append other blend file to add objects from it into your current object.</p>
 
         <h3 id="27">27. Stylized Teenager</h3>
 
         <div class="center">
-            <img class="screen" src="27" />
-            <div class="screen">...</div>
+            <img class="screen" src="27-stylized-teenager.png" />
+            <div class="screen">Creating various characters by editing the mesh.</div>
         </div>
 
         <h2 id="section-4">4. Detailed Character</h2>
@@ -254,59 +259,92 @@
         <h3 id="29">29. Big Man</h3>
 
         <div class="center">
-            <img class="screen" src="29" />
-            <div class="screen">...</div>
+            <img class="screen" src="29-big-man.png" />
+            <div class="screen">Modelling big man based on the reference.</div>
         </div>
 
         <h3 id="30">30. Big Man Details</h3>
 
         <div class="center">
-            <img class="screen" src="30" />
-            <div class="screen">...</div>
+            <img class="screen" src="30-big-man-details.png" />
+            <div class="screen">Making the tie and collar on the shirt.</div>
+        </div>
+
+        <div class="center">
+            <img class="screen" src="30-big-man-details-cleanup.png" />
+            <div class="screen">With experience it's possible to clean up lots of close up faces into a single quad by
+                dissolving.</div>
         </div>
 
         <h3 id="31">31. Merging Vertices</h3>
-
-        <div class="center">
-            <img class="screen" src="31" />
-            <div class="screen">...</div>
-        </div>
+        <p>When auto merge is enabled, vertices that get too close to each other get merged automatically.</p>
 
         <h3 id="32">32. UV Editing</h3>
-
+        <p>Coloring with materials looks ok, but limited.</p>
+        <p>If flat colored but many many colors, using a color map texture is ideal. Place faces within certain colors
+            in the texture.</p>
+        <p>Use closest uv filter so colors do not get blended.</p>
+        <p>Selecting belt: Select edge loop with <b>Alt LMB</b>. Grow selection with <b>Ctrl +</b>.</p>
+        <p>If interface is hidden by too small windows (e.g. UV Editing split screen), drag with middle mouse to find
+            hidden options.</p>
+        <p>Easy way to separate objects to make it easier to change color later: Marking seams (Edge -> Mark Seams).</p>
+        <p>Now, when selecting faces with <b>L</b>, the linking will stop at seams.</p>
+        <p>Selecting all points and scaling to 0 makes it easier to fit in the color face.</p>
         <div class="center">
-            <img class="screen" src="32" />
-            <div class="screen">...</div>
+            <img class="screen" src="32-uv-edditing-creating-material.png" />
+            <div class="screen">Creating the material.</div>
         </div>
+        <div class="center">
+            <img class="screen" src="32-uv-edditing.png" />
+            <div class="screen">UV Editing.</div>
+        </div>
+
 
         <h3 id="33">33. Minor Edits</h3>
 
         <div class="center">
-            <img class="screen" src="33" />
-            <div class="screen">...</div>
+            <img class="screen" src="33-minor-edits.png" />
+            <div class="screen">Changing mesh slightly to add some details like hair, eyes and a pocket.</div>
         </div>
 
         <h2 id="section-5">5. Basic Rigging</h2>
 
         <h3 id="35">35. Human Rig</h3>
-
+        <p>Usually not good if you have transforms in the mesh. Apply rotation and scale.</p>
+        <p>Merging by distance with <b>M</b> after selecting the mesh helps removing confusion with the bone resolver.
+        </p>
+        <p>Also check normals with overlays -> orientation </p>
+        <p>On Overlay -> Statistics to see amount of vertices and other values.</p>
+        <p>Possible to add rig by hand. Add Armature to the scene.</p>
+        <p>There's a plugin to add human rig. Edit -> Preferences -> Add-ons -> Rigify</p>
+        <p>Now when adding armatures with <b>Shift A</b> there will be multiple options.</p>
+        <p>"butterfly" button on top let you mirror movement in the bones along the X axis.</p>
+        <p>"Chest bones" prevent character chest to attaching to the arms instead. Wide characters require those to be
+            more spread.</p>
         <div class="center">
-            <img class="screen" src="35" />
-            <div class="screen">...</div>
+            <img class="screen" src="35-human-rig.png" />
+            <div class="screen">Character rigged</div>
         </div>
 
         <h3 id="36">36. Strike a Pose</h3>
-
+        <p>Parent the mesh within the armature with <b>Ctrl P</b></p>
+        <p>Use pose mode to move the armature.</p>
+        <p><b>Alt R</b> removes any rotation in the armature. <b>Alt G</b> remove any movement.</p>
         <div class="center">
-            <img class="screen" src="36" />
-            <div class="screen">...</div>
+            <img class="screen" src="36-strike-a-pose.png" />
+            <div class="screen">Character posing</div>
         </div>
 
         <h3 id="37">37. Weight Painting</h3>
-
+        <p>Sometimes the auto weight is not good enough.</p>
+        <p><b>Ctrl Tab - Opens mode menu</b></p>
+        <p>Edit -> Lock object mode - Untoggle to let select bones while in weight paint mode.</p>
+        <p>Enter weight paint mode with both object and armature selected.</p>
+        <p>With both character and bones selected in paint mode, holdint down Ctrl and clicking will select a bone.
+            Makes it easier to edit the weight of it.</p>
         <div class="center">
-            <img class="screen" src="37" />
-            <div class="screen">...</div>
+            <img class="screen" src="37-weight-painting.png" />
+            <div class="screen">Painting head bone weights into vertices.</div>
         </div>
 
         <h2 id="section-6">6. Female Character</h2>
